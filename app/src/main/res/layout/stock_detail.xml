@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/chart1_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="OPIS"
+        android:gravity="center_horizontal"
+        android:padding="@dimen/padding_def"
+        android:textSize="@dimen/md_title_textsize" />
+    <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <RadioButton android:id="@+id/radio_month"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/radio_month"
+            android:onClick="onRadioButtonClicked"
+            android:layout_weight="1"
+            android:contentDescription="@string/radio_button_m1"/>
+        <RadioButton android:id="@+id/radio_3months"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/radio_3_months"
+            android:onClick="onRadioButtonClicked"
+            android:layout_weight="1"
+            android:contentDescription="@string/radio_button_m3"/>
+        <RadioButton android:id="@+id/radio_year"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/radio_year"
+            android:onClick="onRadioButtonClicked"
+            android:layout_weight="1"
+            android:checked="true"
+            android:contentDescription="@string/radio_button_y"/>
+    </RadioGroup>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card1"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:layout_margin="16dp"
+        card_view:cardBackgroundColor="#343f57"
+        card_view:cardCornerRadius="0dp"
+        android:visibility="invisible">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.db.chart.view.LineChartView
+                android:id="@+id/chart1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="15dp"/>
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card2"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:layout_margin="16dp"
+        card_view:cardBackgroundColor="#343f57"
+        card_view:cardCornerRadius="0dp"
+        android:visibility="invisible">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.db.chart.view.LineChartView
+                android:id="@+id/chart2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="15dp"/>
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card3"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:layout_margin="16dp"
+        card_view:cardBackgroundColor="#343f57"
+        card_view:cardCornerRadius="0dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.db.chart.view.LineChartView
+                android:id="@+id/chart3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="15dp"/>
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+    </FrameLayout>
+</LinearLayout>
